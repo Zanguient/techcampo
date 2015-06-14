@@ -1,0 +1,25 @@
+<div class="col-lg-12">
+                    <% if (fazendas) {%>
+                        <% for(var i=0, i<fazendas.length, i++){ %>
+                <div>
+                    <select name="fazendalist">
+<!--                      <option value="<%- fazenda.name %>"><%- fazendas[i].name %></option>-->
+                    </select>
+                </div>
+			
+                       
+                
+
+
+
+
+
+
+<div class="col-lg-12">
+                    <% if (fazendas) {%>
+                        <% fazendas.forEach(function(fazenda){ %>
+                <div>
+                    <select name="fazendalist">
+                      <option value="<%- fazenda.name %>"><%- fazenda.name %></option>
+                    </select>
+                </div>

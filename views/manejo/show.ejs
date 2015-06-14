@@ -1,0 +1,90 @@
+<% include ../header %>
+	<% include ../helpers/search_form %>
+	<% if (messages.success) { %>
+		<div class="alert alert-success">
+			<span><%- messages.success %></span>
+		</div>
+	<% } %>
+	<section class="manejo">
+		<header class="manejo-header">
+			<h1 class="pull-left"><%- manejo.title %></h1>
+			<% if (sess.user && sess.user._id == manejo.user){ %>
+				<div class="actions pull-right">
+					<form action="/manejo/<%-manejo._id%>" method="post">
+						<a href="/manejo/<%-manejo._id%>/editar" class="btn btn-default">Editar</a>
+						<input type="hidden" name="_method" value="DELETE">
+						<button type="submit" class="btn btn-danger">Apagar</button>
+					</form>
+				</div>
+			<% } %>
+		</header>
+		<article class="manejo-body">
+			<span><%- manejo.body %></span>
+		</article>
+		<br>
+		<footer class="manejo-footer">
+			<div class="infos">
+				<div class="row">
+					<div class="col-lg-12">
+						<p>
+							<strong>Autor:</strong> <a href="/user/<%- user._id %>"><%- user.email %></a> |
+							<strong>Data: </strong><%=: manejo.createdAt | formatDate %> |
+							<strong><%- manejo.comments.length %> Comentários</strong> |
+							<% if (manejo.tags){ %>
+								<strong>Tags:</strong>
+								<% manejo.tags.split(',').forEach(function(tag) { %>
+									<a href="/tags/<%-tag%>"><span class="label label-info"><%- tag %></span></a>
+								<% }) %>
+							<% } %>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</section>
+	<section class="comments">
+		<header>
+			<h3>Comentários</h3>
+		</header>
+		<article>
+			<% if (manejo.comments) { %>
+				<% manejo.comments.forEach(function(comment){ %>
+					<div class="comment-action">
+						<% if (sess.user && sess.user._id == manejo.user){ %>
+							<div class="pull-left">
+								<form action="/manejo/<%-manejo._id%>/comment/<%-comment._id%>" method="post">
+									<input type="hidden" name="_method" value="DELETE">
+									<button type="submit" class="btn btn-danger btn-small"><i class="icon-trash icon-white">x</i></button>
+								</form>
+							</div>
+						<% } %>
+						<strong><%- comment.email %>: </strong>
+						<span><%- comment.body  %></span>
+					</div>
+				<% }) %>
+			<% } %>
+		</article>
+		<hr />
+		<section class="new-comment">
+			<article>
+				<form action="/manejo/<%-manejo._id%>/comment" method="post">
+					<div class="control-group">
+						<label for="comment[email]">E-Mail</label>
+						<input name="comment[email]" class="form-control" type="email" required >
+					</div>
+					<br>
+					<div class="control-group">
+						<label for="comment[body]">Comentário</label>
+						<textarea class="form-control" name="comment[body]" required ></textarea>
+					</div>
+					<br>
+					<div class="control-group">
+						<button type="submit" class="btn">Comentar</button>
+					</div>
+				</form>
+			</article>
+		</section>
+	</section>
+
+
+<% include ../footer %>

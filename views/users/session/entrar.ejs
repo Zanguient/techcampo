@@ -1,0 +1,18 @@
+<% include ../../header %>
+
+	<div class="jumbotron">
+		<form class="form-signin" action="/login" method="post">
+			<h2 class="form-signin-heading">Login</h2>
+			<input type="email" class="form-control" placeholder="Email" required="" autofocus="" name="user[email]">
+			<input type="password" class="form-control" placeholder="Senha" required="" name="user[password]">
+			<% if (messages.error) { %>
+				<div class="alert alert-danger">
+					<span><%- messages.error %></span>
+				</div>
+			<% } %>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>ou
+			<a href="/cadastrar" class="btn btn-lg btn-link btn-block">Cadastre-se</a>
+		</form>
+	</div>
+
+<% include ../../footer %>

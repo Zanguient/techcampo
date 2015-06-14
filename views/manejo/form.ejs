@@ -1,0 +1,29 @@
+<div class="row marketing">
+	<h3><%- title %></h3>
+	<div class="col-lg-12">
+		<% if (manejo.isNew) {%>
+			<form action="/manejo" method="post">
+		<% } else{ %>
+			<form action="/manejo/<%-manejo._id%>" method="post">
+			<input type="hidden" name="_method" value="PUT">
+		<% }%>
+
+			<div class="control-group">
+				<label for="manejo[title]">Titulo</label>
+				<input type="text" value="<%-manejo.title%>" class="form-control" name="manejo[title]" id="title" placeholder="Escreva um titulo" required >
+			</div>
+			<br>
+			<div class="control-group">
+				<label for="manejo[body]">Conteúdo</label>
+				<textarea rows="5" class="form-control" value="<%-manejo.body%>" name="manejo[body]" id="body" required><%-manejo.body%></textarea>
+			</div>
+			<br>
+			<div class="control-group">
+				<label for="manejo[tags]">Tags</label>
+				<input type="text" value="<%-manejo.tags%>" class="form-control" name="manejo[tags]" id="tags" placeholder="Tags">
+			</div>
+			<br>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Salvar</button>
+		</form>
+	</div>
+</div>

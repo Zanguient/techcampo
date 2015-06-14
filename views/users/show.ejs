@@ -1,0 +1,25 @@
+<% include ../header %>
+	<% if (messages.success) { %>
+		<div class="alert alert-success">
+			<span><%- messages.success %></span>
+		</div>
+	<% } %>
+	<div class="row marketing">
+		<section class="user">
+			<header class="user-header">
+				<h1 class="pull-left" >Perfil</h1>
+				<% if (sess.user && sess.user._id == user._id){ %>
+				<div class="actions pull-right">
+					<form action="/user/<%-user._id%>" method="post">
+						<a href="/user/<%-user._id%>/edit" class="btn btn-default">Editar</a>
+					</form>
+				</div>
+			<% } %>
+			</header>
+			<article>
+				<strong>Nome: </strong><%- user.name %> <br>
+				<strong>E-Mail: </strong> <%- user.email %>
+			</article>
+		</section>
+	</div>
+<% include ../footer %>

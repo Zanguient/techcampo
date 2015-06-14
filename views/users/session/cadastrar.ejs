@@ -1,0 +1,30 @@
+<% include ../../header %>
+
+	<div class="jumbotron">
+		<form class="form-signin" role="form" action="/signup" method="POST">
+			<h2 class="form-signin-heading">Cadastrar Usuário</h2>
+			<input type="text" class="form-control" placeholder="Nome" required="" autofocus="" name="user[name]">
+			<input type="email" class="middle form-control" placeholder="Email" required="" autofocus="" name="user[email]">
+			<input type="password" class="form-control" id="pswd1" placeholder="Senha" required="" name="user[password]">
+            
+             <div class="col-lg-12">
+                <% if (sess.logged_in){ %>
+                <% if (fazendas) {%>
+                 <div>
+                    <select name="fazendalist" value="<%- fazendas %>" data-role="collapsible" class="form-control">
+                     <% fazendas.forEach(function(fazenda){ %>
+                      <option value="<%- fazenda.name %>" data-role="collapsible" name="user[prop]"><%- fazenda.name %></option>
+                     <% }) %>    
+                    </select>
+                </div> 
+                <% }else{ %>
+                    <h2>Nenhum manejo encontrado</h2>
+                <% } %>
+                <% } %>
+                </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" hidden="false">Cadastrar</button>ou
+            <a href="/entrar" class="btn btn-lg btn-link btn-block">Login</a>
+		</form>
+	</div>
+
+<% include ../../footer %>

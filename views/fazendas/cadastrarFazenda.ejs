@@ -1,0 +1,10 @@
+	<% include ../header %>
+	<div class="jumbotron">
+		<form class="form-signin" role="form" action="/create" method="post">
+			<h2 class="form-signin-heading">Cadastrar</h2>
+			<input type="text" class="form-control" placeholder="Nome" required="" autofocus="" name="fazenda[name]">
+			<input type="email" class="middle form-control" placeholder="Email" required="" autofocus="" name="fazenda[email]">
+            <button class="btn btn-lg btn-primary btn-block" type="submit" hidden="false">Cadastrar</button>
+		</form>
+	</div>
+<% include ../footer %>

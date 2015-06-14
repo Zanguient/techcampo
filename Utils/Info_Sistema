@@ -1,0 +1,61 @@
+COMPOSIÇÃO DO SISTEMA PRÓ-RURAL - MÓDULO BOVINOS:
+
+I - CADASTROS BÁSICOS:
+
+Parâmetros: O Sistema PRÓ-RURAL é totalmente parametrizado. Nesse caso, é possibilitado ao usuário o cadastramento de parâmetros tais como:
+intervalos entre nascimento-desmama, nascimento-cobertura, cio-cio, cobertura-toque, cobertura-parto, parto/aborto-1o cio, parto/aborto-cobertura;
+até seis tratamentos controlados como vacina aftosa, vacina brucelose, carrapaticida, etc.;
+Idades para pesagens de machos e fêmeas (no módulo engorda, tratamos com tempo de permanência na fazenda);
+Senhas de acesso ao sistema.
+Cadastro de Fazendas (usuários): É possível fazer o controle sobre diversas fazendas (Pecuária Leite/Corte, Intensiva/Extensiva).
+Cadastro de tipos de Sangue: Pode-se cadastrar os mais diversos tipos de sangue como: Canchim, 5/8, holandês, charolês, zebu, 1/2, P.C., P.O., etc.
+Cadastro de Cruzamentos: Para que o sistema faça automaticamente as projeções e previsões quanto ao produto originado dos cruzamentos entre matrizes e touros.
+Cadastro de Pelagens: Caso se faça necessário, é possível também classificar os animais pela cor de sua pelagem (gado registrado).
+Cadastro de Origens: É importante ter um controle das origens do  gado (quando adquirido de terceiros). Estas informações farão parte da ficha individual do animal.
+Cadastro de Ocorrências: Útil para o controle da ficha sanitária do rebanho. Codifica-se cada ocorrência para emissão de relatórios de análise.
+Cadastro de controle de semens: É útil para o controle de estoque de semens. Tendo a informação de retirada de doses e em qual vaca esta sendo aplicada.
+Cadastro de melhoramento fenotípico: após as avaliações pelo veterinário, o sistema apresentará qual será o melhor touro para cruzar com uma determinada vaca.
+II - CADASTROS PRINCIPAIS:
+
+Cadastro de Animais (intensiva/extensiva/engorda): Composto pelo código, nome (busca criação intensiva), registro (assoc. produtores), tatuagem, data nascimento (na engorda = entrada na fazenda), características, código pai, mãe, datas das últimas vacinações, pesagens  e acumulados (nro crias, nro machos, etc.).
+Manutenção Histórico (intensiva/extensiva): O Sistema PRÓ-RURAL/BOVINOS atualiza automaticamente a ficha do histórico de cada animal à medida que recebe informações do manejo. A manutenção do histórico visa apenas fazer correções à ficha do histórico ou cadastrar informações novas.
+Atualização de Atividades (intensiva/extensiva): No dia a dia, serão fornecidas ao sistema informações tais como: coberturas (a campo, dirigidas ou inseminação), toques, 1os Cios pós-parto (se necessário), parições, abortos, secagens, tratamentos, doenças, pesagens (engoda), etc. É possível leitura de dados vindos de balanças eletrônicas.
+III - RELATÓRIOS:
+
+Todos os relatórios do Sistema PRÓ-RURAL/BOVINOS são parametrizados. Neste caso, o usuário poderá obter relatórios como por exemplo:
+
+Todos os animais;
+Animais com uma certa idade;
+Animais filhos de determinado pai;
+Animais com determinado tipo de pelagem;
+Apenas as fêmeas ou machos;
+Animais que sofreram alteração cadastral a partir de determinada data.
+Além disso, pode-se classificar os relatórios de várias formas:
+
+Código;
+Nome (ou identificação);
+Registro;
+Tatuagem;
+Sangue;
+Idade (crescente ou decrescente);
+Índices (em relatórios para análises de performances);
+Listagem de Animais (completa e reduzida): Exibe as informações dos animais da fazenda de forma completa (todas as informações, exceto o histórico, que é fornecido na ficha individual) ou reduzida (apenas informações principais). Há um totalizador completo no final deste relatório com informações de acumulados por faixa de idade, tipo de sangue, idade média, etc.
+Ficha Individual (intensiva/extensiva): Para cada animal, será emitida uma ficha completa com todas as suas informações (dados cadastrais, genealogia - ascendências e descendências -, pesagens, ocorrências e tratamentos, índices, etc).
+Relatórios de Previsões de atividades: Serão emitidas em vários relatórios de atividades: fêmeas disponíveis p/ coberturas, fêmeas no manejo, fêmeas com possibilidade de novo cio, disponíveis p/ toque, anotação de 1os Cios pos-parto, parições, fêmeas que devem ser secadas, previsão de  tratamentos, previsão de pesagens, etc.
+Relatório de Previsão de parições (intensiva/extensiva): Informa-se, mês a mês (ou em outra ordem como touro a touro), a relação das matrizes cheias e suas respectivas datas de provável parto.
+Situação geral do Rebanho (intensiva/extensiva): Em dois relatórios (um para machos e outro para fêmeas), serão exibidos a situação que se encontra cada animal no momento e seus índices de produtividade e fertilidade.
+Relatório de Pesos (intensiva/extensiva/engorda): Classificado por idade ou índices de ganho de peso, este relatório é útil para selecionar animais com peso abaixo ou acima da média de peso.
+Relatórios de Engorda (engorda): Classificados por índices de ganho de peso, pesos em datas projetadas, peso hoje, datas a atingir peso de abate ou tempo em fazenda, este relatório é útil para a seleção de animais para abate.
+Relatório da Produção Leiteira (intensiva): Relatórios que possuem informações sobre a produção leiteira (pecuária de leite) selecionados por ano ou por ciclos.
+Relatório Sintético: Este relatório possui, de forma concentrada, todas as informações sintetizadas da fazenda nos últimos 12 meses para análise e comparações.
+Relatórios Diversos (intensiva) : Relatórios de pesagens realizadas, coberturas, parições, etc. Úteis para envio de informações à associações de produtores.
+Relatórios ABCCAN: O sistema irá gerar todos os relatórios necessários para informar a associação (comunicação cobertura / nascimento ...).
+
+IV - OUTRAS INFORMAÇÕES:
+
+Sistema multi-usuário e multi-fazendas;
+Telas e relatórios padronizados;
+Pequenas adaptações podem ser feitas sem custo adicional;
+Sistema já instalado e funcionando em várias fazendas;
+Pecuária de Corte e Leite;
+Pecuária Intensiva/Extensiva/Engorda.
