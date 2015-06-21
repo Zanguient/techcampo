@@ -6,6 +6,7 @@ module.exports = function (app) {
 	app.get('/user/:id/edit', logged, authentication, users.edit);
 	app.put('/user/:id', logged, authentication, users.update);
 	app.get('/user/:id', logged, users.show);
+    app.get('/users', logged, users.showAll);
 	app.post('/login', logged, users.login);
 	app.get('/entrar', logged, users.entrar);
 	app.get('/cadastrar', logged, users.cadastrar);

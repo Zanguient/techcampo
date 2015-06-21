@@ -44,13 +44,22 @@ module.exports = function (app) {
 				};
 			})
 		},
+        showAll: function (req, res) {
+			var params = {};
+			User.find({}).sort({'updateAt': -1}).exec(function(err, users){
+				params = {
+					users : users,
+                    tags : req.tags
+				};
+				res.render('users/showAll', params);
+			});
+		},
 		entrar : function (req, res) {
 			res.render('users/session/entrar', {
 				tags : req.tags
 			});
 		},
 		cadastrar : function (req, res) {
-            
             var params = {};
 			Fazenda.find({}).sort({'updateAt': -1}).exec(function(err, fazendas){
 				params = {

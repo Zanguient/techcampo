@@ -1,0 +1,31 @@
+<% include ../header %>
+        		<div class="row marketing">
+                    <section class="user">
+                    <header class="user-header">
+                    <h1 class="pull-left" >Perfil</h1>
+                    <div class="col-lg-12">
+                        <% if (users) {%>
+                            <% users.forEach(function(user){ %>
+                                <div class="actions pull-right">
+                                    <form action="/user/<%-user._id%>" method="post">
+                                        <a href="/user/<%-user._id%>/edit" class="btn btn-default">Editar</a>
+                                    </form>
+                                </div>
+                    </header>
+                        <article>
+                            <strong>Nome: </strong><%- user.name %><br>
+                            <strong>E-Mail: </strong> <%- user.email %>
+                        </article>
+                        </section>
+	                </div>
+                    <div class="row">
+                    <hr />
+                    </div>
+                    <% }) %>
+                        <% }else{ %>
+                            <h2>Nenhum manejo encontrado</h2>
+                        <% } %>
+                </div>
+                    
+				
+<% include ../footer %>
