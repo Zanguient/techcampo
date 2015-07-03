@@ -1,0 +1,21 @@
+<% include ../header %>
+	
+	<div class="row marketing">
+		<h3><%- title %></h3>
+		<div class="col-lg-12">
+			<form action="/animal/<%-animal._id%>" method="post">
+				<input type="hidden" name="_method" value="PUT">
+			
+
+				<div class="control-group">
+					<label for="animal[name]">Nome</label>
+					<input type="Text" value="<%-animal.name%>" class="form-control" name="animal[name]" id="name" placeholder="Nome" required >
+				    <label for="animal[email]">email</label>
+					<input type="Text" value="<%-animal.email%>" class="form-control" name="animal[email]" id="email" placeholder="Email" required >
+				</div>
+				<br>
+				<button class="btn btn-lg btn-primary" type="submit">Salvar</button>
+			</form>
+		</div>
+	</div>
+<% include ../footer %>

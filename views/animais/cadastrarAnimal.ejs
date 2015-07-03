@@ -1,0 +1,24 @@
+	<% include ../header %>
+	<div class="jumbotron">
+		<form class="form-signin" role="form" action="/criar" method="post">
+			<h2 class="form-signin-heading">Cadastrar Animal</h2>
+			<input type="text" class="form-control" placeholder="Nome" required="" autofocus="" name="animal[name]">
+			<input type="text" class="middle form-control" placeholder="Email" required="" autofocus="" name="animal[brinco]">
+            <% if (sess.logged_in){ %>
+                <% if (fazendas) {%>
+                 <div>
+                    <select name"animal[fazenda]" data-role="collapsible"  class="form-control" >
+                     <% fazendas.forEach(function(fazenda){ %>
+                      <option value="<%- fazenda.name %>" data-role="collapsible" name="<%- fazenda._id %>" ><%- fazenda.name %></option>
+                       <hr />
+                     <% }) %>    
+                    </select>
+                </div> 
+                <% }else{ %>
+                    <h2>Nenhum manejo encontrado</h2>
+                <% } %>
+                <% } %>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" hidden="false">Cadastrar</button>
+		</form>
+	</div>
+<% include ../footer %>
